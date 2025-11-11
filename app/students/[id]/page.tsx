@@ -60,10 +60,10 @@ export default async function StudentDetailPage({
   )
 
   return (
-    <div className="flex min-h-screen bg-muted/30">
+    <div className="flex min-h-screen bg-[#008268]">
       <Sidebar />
 
-      <main className="ml-64 flex-1 p-8">
+      <main className="ml-64 flex-1 bg-white p-8">
         <div className="mx-auto max-w-7xl space-y-8">
           {/* ヘッダー */}
           <div className="flex items-center justify-between">
@@ -77,7 +77,7 @@ export default async function StudentDetailPage({
           </div>
 
           {/* 基本情報カード */}
-          <Card>
+          <Card className="bg-white">
             <CardContent className="p-6">
               <div className="flex items-start gap-6">
                 {student.photoUrl ? (
@@ -132,11 +132,11 @@ export default async function StudentDetailPage({
                   <div className="space-y-4">
                     <div>
                       <p className="text-sm text-muted-foreground">出席率</p>
-                      <p className="text-3xl font-bold">{attendanceRate}%</p>
+                      <p className="text-3xl font-bold text-[#008268]">{attendanceRate}%</p>
                     </div>
                     <div>
                       <p className="text-sm text-muted-foreground">平均習熟度</p>
-                      <p className="text-3xl font-bold">{avgProficiency}</p>
+                      <p className="text-3xl font-bold text-[#008268]">{avgProficiency}</p>
                     </div>
                   </div>
                 </div>
@@ -167,7 +167,7 @@ export default async function StudentDetailPage({
 
             {/* 受講履歴 */}
             <TabsContent value="attendance" className="space-y-4">
-              <Card>
+              <Card className="bg-white">
                 <CardHeader>
                   <CardTitle>受講履歴</CardTitle>
                   <CardDescription>全{attendanceRecords.length}回の実習に参加</CardDescription>
@@ -213,7 +213,7 @@ export default async function StudentDetailPage({
 
             {/* 成績 */}
             <TabsContent value="grades" className="space-y-4">
-              <Card>
+              <Card className="bg-white">
                 <CardHeader>
                   <CardTitle>成績一覧</CardTitle>
                   <CardDescription>科目別の成績評価</CardDescription>
@@ -270,7 +270,7 @@ export default async function StudentDetailPage({
 
             {/* イベント */}
             <TabsContent value="events" className="space-y-4">
-              <Card>
+              <Card className="bg-white">
                 <CardHeader>
                   <CardTitle>イベント参加履歴</CardTitle>
                   <CardDescription>修学旅行・特別講義など</CardDescription>
@@ -327,7 +327,7 @@ export default async function StudentDetailPage({
 
             {/* 保護者情報 */}
             <TabsContent value="guardian" className="space-y-4">
-              <Card>
+              <Card className="bg-white">
                 <CardHeader>
                   <CardTitle>保護者情報</CardTitle>
                   <CardDescription>緊急連絡先</CardDescription>

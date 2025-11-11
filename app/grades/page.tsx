@@ -31,10 +31,10 @@ export default async function GradesPage() {
   const avgAttendance = Math.round(grades.reduce((sum, g) => sum + g.attendance, 0) / grades.length)
 
   return (
-    <div className="flex min-h-screen bg-muted/30">
+    <div className="flex min-h-screen bg-[#008268]">
       <Sidebar />
 
-      <main className="ml-64 flex-1 p-8">
+      <main className="ml-64 flex-1 bg-white p-8">
         <div className="mx-auto max-w-7xl space-y-8">
           {/* ヘッダー */}
           <div>
@@ -44,42 +44,42 @@ export default async function GradesPage() {
 
           {/* 統計情報 */}
           <div className="grid gap-4 md:grid-cols-4">
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">総評価数</p>
-                  <p className="mt-2 text-3xl font-bold">{grades.length}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{grades.length}</p>
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">A評価</p>
-                  <p className="mt-2 text-3xl font-bold text-green-600">{gradeDistribution.A}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{gradeDistribution.A}</p>
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">平均出席率</p>
-                  <p className="mt-2 text-3xl font-bold">{avgAttendance}%</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{avgAttendance}%</p>
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">評価科目</p>
-                  <p className="mt-2 text-3xl font-bold">{courses.length}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{courses.length}</p>
                 </div>
               </CardContent>
             </Card>
           </div>
 
           {/* 成績分布 */}
-          <Card>
+          <Card className="bg-white">
             <CardHeader>
               <CardTitle>成績分布</CardTitle>
               <CardDescription>全体の評価割合</CardDescription>
@@ -98,7 +98,7 @@ export default async function GradesPage() {
           </Card>
 
           {/* 成績一覧 */}
-          <Card>
+          <Card className="bg-white">
             <CardHeader>
               <CardTitle>成績一覧</CardTitle>
               <CardDescription>科目別・生徒別の評価</CardDescription>

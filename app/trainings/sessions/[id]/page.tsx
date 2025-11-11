@@ -73,9 +73,9 @@ export default function SessionDetailPage({
 
   if (!session || !course) {
     return (
-      <div className="flex min-h-screen bg-muted/30">
+      <div className="flex min-h-screen bg-[#008268]">
         <Sidebar />
-        <main className="ml-64 flex-1 p-8">
+        <main className="ml-64 flex-1 bg-white p-8">
           <div className="flex items-center justify-center py-12">
             <p className="text-muted-foreground">読み込み中...</p>
           </div>
@@ -85,10 +85,10 @@ export default function SessionDetailPage({
   }
 
   return (
-    <div className="flex min-h-screen bg-muted/30">
+    <div className="flex min-h-screen bg-[#008268]">
       <Sidebar />
 
-      <main className="ml-64 flex-1 p-8">
+      <main className="ml-64 flex-1 bg-white p-8">
         <div className="mx-auto max-w-7xl space-y-8">
           {/* ヘッダー */}
           <div className="flex items-center justify-between">
@@ -114,7 +114,7 @@ export default function SessionDetailPage({
           </div>
 
           {/* セッション情報 */}
-          <Card>
+          <Card className="bg-white">
             <CardHeader>
               <div className="flex items-start justify-between">
                 <div>
@@ -176,7 +176,7 @@ export default function SessionDetailPage({
           </Card>
 
           {/* 出席管理・習熟度入力 */}
-          <Card>
+          <Card className="bg-white">
             <CardHeader>
               <CardTitle>出席管理・習熟度記録</CardTitle>
               <CardDescription>

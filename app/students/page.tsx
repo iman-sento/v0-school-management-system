@@ -28,10 +28,10 @@ export default async function StudentsPage() {
   }
 
   return (
-    <div className="flex min-h-screen bg-muted/30">
+    <div className="flex min-h-screen bg-[#008268]">
       <Sidebar />
 
-      <main className="ml-64 flex-1 p-8">
+      <main className="ml-64 flex-1 bg-white p-8">
         <div className="mx-auto max-w-7xl space-y-8">
           {/* ヘッダー */}
           <div className="flex items-center justify-between">
@@ -47,42 +47,42 @@ export default async function StudentsPage() {
 
           {/* 統計情報 */}
           <div className="grid gap-4 md:grid-cols-4">
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">在籍</p>
-                  <p className="mt-2 text-3xl font-bold">{statusCounts["在籍"]}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{statusCounts["在籍"]}</p>
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">休学</p>
-                  <p className="mt-2 text-3xl font-bold">{statusCounts["休学"]}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{statusCounts["休学"]}</p>
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">退学</p>
-                  <p className="mt-2 text-3xl font-bold">{statusCounts["退学"]}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{statusCounts["退学"]}</p>
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">卒業</p>
-                  <p className="mt-2 text-3xl font-bold">{statusCounts["卒業"]}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{statusCounts["卒業"]}</p>
                 </div>
               </CardContent>
             </Card>
           </div>
 
           {/* 検索とフィルター */}
-          <Card>
+          <Card className="bg-white">
             <CardHeader>
               <div className="flex items-center gap-4">
                 <div className="relative flex-1">
@@ -95,7 +95,7 @@ export default async function StudentsPage() {
           </Card>
 
           {/* 生徒一覧 */}
-          <Card>
+          <Card className="bg-white">
             <CardHeader>
               <CardTitle>生徒一覧</CardTitle>
             </CardHeader>
@@ -141,7 +141,7 @@ export default async function StudentsPage() {
                     <div className="flex items-center gap-6">
                       <div className="text-right">
                         <p className="text-sm font-medium">出席率</p>
-                        <p className="text-2xl font-bold">{student.attendanceRate}%</p>
+                        <p className="text-2xl font-bold text-[#008268]">{student.attendanceRate}%</p>
                       </div>
                       <Button variant="outline" asChild>
                         <Link href={`/students/${student.id}`}>詳細</Link>

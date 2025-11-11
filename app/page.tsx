@@ -42,10 +42,10 @@ export default async function DashboardPage() {
   )
 
   return (
-    <div className="flex min-h-screen bg-muted/30">
+    <div className="flex min-h-screen bg-[#008268]">
       <Sidebar />
 
-      <main className="ml-64 flex-1 p-8">
+      <main className="ml-64 flex-1 bg-white p-8">
         <div className="mx-auto max-w-7xl space-y-8">
           {/* ヘッダー */}
           <div>
@@ -87,7 +87,7 @@ export default async function DashboardPage() {
 
           <div className="grid gap-6 lg:grid-cols-2">
             {/* 今日の予定 */}
-            <Card>
+            <Card className="bg-white">
               <CardHeader>
                 <CardTitle>今日の予定</CardTitle>
                 <CardDescription>{formatDate(today)}</CardDescription>
@@ -121,7 +121,7 @@ export default async function DashboardPage() {
             </Card>
 
             {/* 最近の実習 */}
-            <Card>
+            <Card className="bg-white">
               <CardHeader>
                 <div className="flex items-center justify-between">
                   <div>
@@ -152,7 +152,7 @@ export default async function DashboardPage() {
           </div>
 
           {/* 注意が必要な生徒 */}
-          <Card>
+          <Card className="bg-white">
             <CardHeader>
               <div className="flex items-center gap-2">
                 <AlertCircle className="h-5 w-5 text-orange-500" />

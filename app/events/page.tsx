@@ -20,10 +20,10 @@ export default async function EventsPage() {
   const completedEvents = eventsWithStats.filter((e) => e.status === "実施済み")
 
   return (
-    <div className="flex min-h-screen bg-muted/30">
+    <div className="flex min-h-screen bg-[#008268]">
       <Sidebar />
 
-      <main className="ml-64 flex-1 p-8">
+      <main className="ml-64 flex-1 bg-white p-8">
         <div className="mx-auto max-w-7xl space-y-8">
           {/* ヘッダー */}
           <div className="flex items-center justify-between">
@@ -39,34 +39,34 @@ export default async function EventsPage() {
 
           {/* 統計情報 */}
           <div className="grid gap-4 md:grid-cols-3">
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">募集中</p>
-                  <p className="mt-2 text-3xl font-bold">{activeEvents.length}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{activeEvents.length}</p>
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">実施済み</p>
-                  <p className="mt-2 text-3xl font-bold">{completedEvents.length}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{completedEvents.length}</p>
                 </div>
               </CardContent>
             </Card>
-            <Card>
+            <Card className="bg-white">
               <CardContent className="p-6">
                 <div className="text-center">
                   <p className="text-sm font-medium text-muted-foreground">総申込数</p>
-                  <p className="mt-2 text-3xl font-bold">{allParticipations.length}</p>
+                  <p className="mt-2 text-3xl font-bold text-[#008268]">{allParticipations.length}</p>
                 </div>
               </CardContent>
             </Card>
           </div>
 
           {/* イベント一覧 */}
-          <Card>
+          <Card className="bg-white">
             <CardHeader>
               <CardTitle>イベント一覧</CardTitle>
               <CardDescription>全{events.length}件のイベント</CardDescription>

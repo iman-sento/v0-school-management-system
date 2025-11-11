@@ -16,13 +16,13 @@ interface StatCardProps {
 
 export function StatCard({ title, value, icon: Icon, description, trend, colorClass }: StatCardProps) {
   return (
-    <Card>
+    <Card className="bg-white">
       <CardContent className="p-6">
         <div className="flex items-start justify-between">
           <div className="flex-1">
             <p className="text-sm font-medium text-muted-foreground">{title}</p>
             <div className="mt-2 flex items-baseline gap-x-2">
-              <p className="text-3xl font-semibold tracking-tight">{value}</p>
+              <p className="text-3xl font-semibold tracking-tight text-[#008268]">{value}</p>
               {trend && (
                 <span className={cn("text-sm font-medium", trend.isPositive ? "text-green-600" : "text-red-600")}>
                   {trend.isPositive ? "+" : ""}
